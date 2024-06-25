@@ -1,0 +1,48 @@
+/* 1. Start
+
+2. Declare variables:
+   - num: integer (input number)
+   - result: integer (to store the calculated result)
+
+3. Prompt the user to enter a number.
+   - Use printf to display "Enter a number: ".
+   - Use scanf to read the input number into the variable num.
+
+4. Check if the number is even or odd:
+   - Use the modulo operator to determine if num % 2 == 0.
+   - If true:
+     - Calculate the square of num and store it in result.
+       - result = num * num
+   - Else (num is odd):
+     - Calculate the cube of num and store it in result.
+       - result = num * num * num
+
+5. Display the result:
+   - Use printf to output the result based on whether num was even or odd.
+   - For even numbers: "Square of %d is %d\n", num, result
+   - For odd numbers: "Cube of %d is %d\n", num, result
+
+6. End */
+
+#include <stdio.h>
+
+int main() {
+    int num, result;
+
+    // Prompt user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Check if the number is even or odd
+    if (num % 2 == 0) {
+        // Calculate square for even numbers
+        result = num * num;
+        printf("Square of %d is %d\n", num, result);
+    } else {
+        // Calculate cube for odd numbers
+        result = num * num * num;
+        printf("Cube of %d is %d\n", num, result);
+    }
+
+    return 0;
+}
